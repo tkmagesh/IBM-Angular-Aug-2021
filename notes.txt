@@ -44,3 +44,83 @@ ES6 (ECMAScript6, ESNext, ES2015)
     - Promises
 
     http://es6-features.org
+
+To install the cli
+    npm install @angular/cli -g
+
+To create an application (first-app)
+    ng new first-app
+
+To start the application
+    from the application folder, run the command "npm start"
+
+var x
+x = 10
+x = "asdfsa"
+x = true
+x = function(){}
+x = {}
+
+function add(x,y){
+    return x + y;
+}
+
+add(10,20)
+add(10, "20")
+
+var x : number;
+x = "sadfas"
+
+function add(x : number, y : number) : number {
+    return x + y;
+}
+
+add("asdfdsa", 100)
+
+    |
+    |
+    V
+    tsc
+    |
+    |
+    V
+
+function add(x, y) {
+    return x + y;
+}
+
+Features
+    Interfaces
+    Decorators
+    Enums
+    Generics
+
+
+Building Blocks of Angular
+    Component
+        - View
+        - Encapsulates the presentation + UI Behavior + State
+        - Can be composed of other components
+        - decorated with @Component() decorator
+
+    Directive
+        - low level DOM manipulation logic
+
+    Pipe
+        - Encapsulates transformation logic for presentation
+
+    Service
+        - NON UI logic
+
+    Module
+        - Registry of application entities (Component, Pipe, Directive, Service)
+        - Dependency Injection is taken care of by the Module
+        - Acts as the starting point of our application
+        - There has to be a minimum of 1 module in any angular application
+        - classes decorated with decorator @NgModule
+
+ES6 Modules
+    - ES6 modules are a way to organize our code into logical units
+    - Everything defined in a file is considered 'PRIVATE'
+    - Public entities have to be explicity 'exported' (using the 'export' keyword)
+    - Public entities from other files have to be explicity imported (using the 'import' keyword) to use them
