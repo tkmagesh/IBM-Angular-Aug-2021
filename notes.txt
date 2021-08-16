@@ -124,3 +124,13 @@ ES6 Modules
     - Everything defined in a file is considered 'PRIVATE'
     - Public entities have to be explicity 'exported' (using the 'export' keyword)
     - Public entities from other files have to be explicity imported (using the 'import' keyword) to use them
+
+
+TODO:
+    http://es6-features.org
+    http://www.typescriptlang.org/docs/handbook
+    Array Methods
+        - forEach
+        - map
+        - reduce
+        - filter
