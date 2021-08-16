@@ -1,0 +1,20 @@
+Methodology
+    No powerpoint
+
+Schedule
+    Commence    : 9:00 Hrs
+    Tea break   : 11:00 Hrs (20 mins)
+    Lunch break : 13:00 Hrs (1 hour)
+    Tea break   : 15:30 Hrs (20 mins)
+    Wind up     : 17:30 Hrs
+
+About You
+Name
+Total Experience
+Primary Skillset
+Experience in any JS framework (Backbone, React, Angular, Angular.js, vue, etc)
+Any intesting books that you read / interesting shows that you watched recently
+
+Node.js (LTS)
+Chrome BRowser
+Visual Studio Code (http://code.visualstudio.com)
