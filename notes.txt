@@ -18,3 +18,29 @@ Any intesting books that you read / interesting shows that you watched recently
 Node.js (LTS)
 Chrome BRowser
 Visual Studio Code (http://code.visualstudio.com)
+
+Assumption
+    1. No validations are needed. The application meets the functional requirements perfectly
+    2. Another team is responsible for preparing the application for deployment
+        refactor the code into respective files (.css, .js etc)
+
+reactive X proactive
+
+ES6 (ECMAScript6, ESNext, ES2015)
+    - let
+    - const
+    - array destructuring
+    - rest operator (array)
+    - spread operator (array)
+    - object destructuring
+    - rest operator (object)
+    - spread operator (object)
+    - default parameters
+    - arrow functions
+    - iterators
+    - template strings
+    - class
+    - modules
+    - Promises
+
+    http://es6-features.org
