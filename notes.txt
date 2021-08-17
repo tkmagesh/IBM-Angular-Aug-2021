@@ -105,7 +105,14 @@ Building Blocks of Angular
 
     Directive
         - low level DOM manipulation logic
+            attribute directive
+                that manipulates the attributes of existing dom nodes
+                DOESNOT change the structure of the DOM tree (by adding / removing dom nodes)
+                used with [] notation
 
+            stuctural directive
+                change the structure of the DOM tree (by adding / removing dom nodes)
+                used with * prefix
     Pipe
         - Encapsulates transformation logic for presentation
 
@@ -141,4 +148,3 @@ TO create a new component
     OR
     ng g c greeter
 
-    

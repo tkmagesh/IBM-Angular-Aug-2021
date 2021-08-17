@@ -5,11 +5,44 @@
     <input type="number" #txtN2 (input)="setN2(txtN2.value)"> 
 -->
 
-<input type="number"  (input)="setN1($any($event.target).value)">
-<input type="number"  (input)="setN2($any($event.target).value)">
+<input type="number" (input)="setN1($any($event.target).value)">
+<input type="number" (input)="setN2($any($event.target).value)">
 <br>
 <input type="button" value="Add" (click)="onBtnAddClick()">
 <input type="button" value="Subtract" (click)="onBtnSubClick()">
 <input type="button" value="Multiply" (click)="onBtnMulClick()">
 <input type="button" value="Divide" (click)="onBtnDivClick()">
-<div>{{result}}</div>
+<!-- 
+<div [ngClass]="{ positive : result >=0, negative : result < 0}">
+    {{result | currency:'INR'}}
+</div> 
+-->
+
+
+<!-- 
+    <div *ngIf="result >= 0" class="positive">{{result | currency:'INR'}}</div>
+    <div *ngIf="result < 0" class="negative">{{result | currency:'INR'}}</div>  
+-->
+
+<div *ngIf="result >= 0 ; else negativeResult" class="positive">
+    {{result | currency:'INR'}}
+</div>
+<ng-template #negativeResult> 
+    <div class="negative"  >
+        {{result | currency:'INR'}}
+    </div>
+</ng-template>
+
+<!-- 
+    <div *ngIf="result >= 0 ; then positiveResult else negativeResult"></div>
+    <ng-template #positiveResult>
+        <div class="positive">
+            {{result | currency:'INR'}}
+        </div>
+    </ng-template>
+    <ng-template #negativeResult>
+        <div class="negative">
+            {{result | currency:'INR'}}
+        </div>
+    </ng-template> 
+-->
