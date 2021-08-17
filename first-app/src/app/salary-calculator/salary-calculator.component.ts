@@ -9,6 +9,12 @@ import { SalaryCalculatorModel } from './salary-calculator.model'
 export class SalaryCalculatorComponent implements OnInit {
 
   /* 
+    // not using the Angular UI
+    model : SalaryCalculatorModel = new SalaryCalculatorModel();
+  */
+
+  /* 
+  //using Angular DI (the class should be registered in the module [providers])
   model : SalaryCalculatorModel ;
 
   constructor(model : SalaryCalculatorModel) { 
@@ -16,6 +22,7 @@ export class SalaryCalculatorComponent implements OnInit {
   } 
   */
 
+  //shortcut for using Angular DI (the class should be registered in the module [providers])
   constructor(public model : SalaryCalculatorModel){
   }
 
