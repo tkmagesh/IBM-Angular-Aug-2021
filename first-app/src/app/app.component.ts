@@ -7,11 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Demo';
+  
+  userChoice : string = '';
 
   constructor(){
-    setTimeout(() => {
-      this.title = 'New Demo';
-    }, 5000)
+    
   }
 }

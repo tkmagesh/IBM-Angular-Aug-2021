@@ -1,1 +1,21 @@
-<span>{{ title }} app is running!</span>
+<input type="button" value="Products" (click)="userChoice='products'">
+<input type="button" value="Greeter" (click)="userChoice='greeter'">
+<input type="button" value="Calculator" (click)="userChoice='calculator'">
+<input type="button" value="Salary Calculator" (click)="userChoice='salary-calculator'">
+
+<!-- Using the ngIf directive -->
+<!-- 
+<app-greeter *ngIf="userChoice=='greeter'"></app-greeter>
+<app-calculator *ngIf="userChoice=='calculator'"></app-calculator>
+<app-salary-calculator *ngIf="userChoice=='salary-calculator'"></app-salary-calculator>
+<app-products *ngIf="userChoice=='products'"></app-products> 
+-->
+
+<!-- Using the ngSwitch directive -->
+<div [ngSwitch]="userChoice">
+    <app-greeter *ngSwitchCase="'greeter'"></app-greeter>
+    <app-calculator *ngSwitchCase="'calculator'"></app-calculator>
+    <app-salary-calculator *ngSwitchCase="'salary-calculator'"></app-salary-calculator>
+    <app-products *ngSwitchCase="'products'"></app-products>
+    <div *ngSwitchDefault>Select your option!</div>
+</div>

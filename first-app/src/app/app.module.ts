@@ -28,11 +28,7 @@ import { ProductsComponent } from './products/products.component';
   ],
   /* bootstrap - define the top-most components in the application UI */
   bootstrap: [
-    AppComponent,
-    GreeterComponent,
-    CalculatorComponent,
-    SalaryCalculatorComponent,
-    ProductsComponent
+    AppComponent
   ]
 })
 export class AppModule { }
