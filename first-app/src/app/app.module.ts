@@ -4,13 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { GreeterComponent } from './greeter/greeter.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { SalaryCalculatorComponent } from './salary-calculator/salary-calculator.component';
 
 @NgModule({
   /* declarations -> to register all the UI entities of the app (Component, Directives & Pipes) */
   declarations: [
     AppComponent,
     GreeterComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    SalaryCalculatorComponent
   ],
   /* imports - other modules that this module depends on */
   imports: [
@@ -22,7 +24,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
   bootstrap: [
     AppComponent,
     GreeterComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    SalaryCalculatorComponent
   ]
 })
 export class AppModule { }
