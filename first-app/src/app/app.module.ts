@@ -6,6 +6,7 @@ import { GreeterComponent } from './greeter/greeter.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { SalaryCalculatorComponent } from './salary-calculator/salary-calculator.component';
 import { SalaryCalculatorModel } from './salary-calculator/salary-calculator.model';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   /* declarations -> to register all the UI entities of the app (Component, Directives & Pipes) */
@@ -13,7 +14,8 @@ import { SalaryCalculatorModel } from './salary-calculator/salary-calculator.mod
     AppComponent,
     GreeterComponent,
     CalculatorComponent,
-    SalaryCalculatorComponent
+    SalaryCalculatorComponent,
+    ProductsComponent
   ],
   /* imports - other modules that this module depends on */
   imports: [
@@ -29,7 +31,8 @@ import { SalaryCalculatorModel } from './salary-calculator/salary-calculator.mod
     AppComponent,
     GreeterComponent,
     CalculatorComponent,
-    SalaryCalculatorComponent
+    SalaryCalculatorComponent,
+    ProductsComponent
   ]
 })
 export class AppModule { }
