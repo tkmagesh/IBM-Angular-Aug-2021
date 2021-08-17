@@ -134,3 +134,11 @@ TODO:
         - map
         - reduce
         - filter
+
+
+TO create a new component
+    ng generate component greeter
+    OR
+    ng g c greeter
+
+    
