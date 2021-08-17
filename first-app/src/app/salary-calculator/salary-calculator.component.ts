@@ -4,7 +4,8 @@ import { SalaryCalculatorModel } from './salary-calculator.model'
 @Component({
   selector: 'app-salary-calculator',
   templateUrl: './salary-calculator.component.html',
-  styleUrls: ['./salary-calculator.component.css']
+  styleUrls: ['./salary-calculator.component.css'],
+  providers: [SalaryCalculatorModel] /* a new instance is created for this component */
 })
 export class SalaryCalculatorComponent implements OnInit {
 

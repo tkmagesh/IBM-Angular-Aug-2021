@@ -20,6 +20,7 @@ import { SalaryCalculatorModel } from './salary-calculator/salary-calculator.mod
     BrowserModule
   ],
   /* providers -> to register all the NON UI entites of the application */
+  /* The registered services will be created as a singleton and the same instance will be injected wherever it is need within the module */
   providers: [
     SalaryCalculatorModel
   ],
