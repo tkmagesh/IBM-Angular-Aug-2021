@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { GreeterComponent } from './greeter/greeter.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { SalaryCalculatorComponent } from './salary-calculator/salary-calculator.component';
+import { SalaryCalculatorModel } from './salary-calculator/salary-calculator.model';
 
 @NgModule({
   /* declarations -> to register all the UI entities of the app (Component, Directives & Pipes) */
@@ -19,7 +20,9 @@ import { SalaryCalculatorComponent } from './salary-calculator/salary-calculator
     BrowserModule
   ],
   /* providers -> to register all the NON UI entites of the application */
-  providers: [],
+  providers: [
+    SalaryCalculatorModel
+  ],
   /* bootstrap - define the top-most components in the application UI */
   bootstrap: [
     AppComponent,
