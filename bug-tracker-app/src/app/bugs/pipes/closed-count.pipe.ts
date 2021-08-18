@@ -1,12 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Bug } from '../models/bug';
 
 @Pipe({
   name: 'closedCount'
 })
 export class ClosedCountPipe implements PipeTransform {
 
-  transform(bugName : string, textLength : number = 30): string {
-    return bugName.length >= textLength ? bugName.substr(0,textLength) + '...' : bugName;
+  transform(bugs : Bug[]): number {
+    return bugs.reduce((result, bug) => bug.isClosed ? result + 1 : result, 0)
   }
 
 }

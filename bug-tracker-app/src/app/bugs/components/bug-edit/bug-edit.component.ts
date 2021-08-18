@@ -14,7 +14,7 @@ export class BugEditComponent implements OnInit {
 
   constructor(private bugOperations : BugOperationsService) {
     
-   }
+  }
 
   ngOnInit(): void {
   }

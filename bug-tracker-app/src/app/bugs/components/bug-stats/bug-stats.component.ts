@@ -17,9 +17,10 @@ export class BugStatsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+ /* 
   getClosedCount() : number {
     return this.bugs.reduce((result, bug) => bug.isClosed ? result + 1 : result, 0)
   }
-
+  */
 
 }
