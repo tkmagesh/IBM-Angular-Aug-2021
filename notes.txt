@@ -148,3 +148,10 @@ TO create a new component
     OR
     ng g c greeter
 
+
+to install moment
+    npm install moment
+
+    to use moment
+    import * as moment from 'moment'
+    moment('2021-08-18T09:20:26.721Z').fromNow()
