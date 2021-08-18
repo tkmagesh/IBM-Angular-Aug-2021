@@ -27,4 +27,20 @@ export class BugsComponent implements OnInit {
     this.bugs.push(newBug);
   }
 
+  onBugNameClick(bug : Bug){
+    bug.isClosed = !bug.isClosed;
+  }
+
+  onBtnRemoveClick(bugToRemove : Bug){
+    this.bugs = this.bugs.filter(bug => bug.id !== bugToRemove.id);
+  }
+
+  onBtnRemoveClosedClick(){
+    this.bugs = this.bugs.filter(bug => !bug.isClosed);
+  }
+
+  getClosedCount() : number {
+    return this.bugs.reduce((result, bug) => bug.isClosed ? result + 1 : result, 0)
+  }
+
 }
