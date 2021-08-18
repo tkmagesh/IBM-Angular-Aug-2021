@@ -6,6 +6,7 @@ import { BugsComponent } from './bugs/bugs.component';
 import { ClosedCountPipe } from './bugs/pipes/closed-count.pipe';
 import { ElapsedPipe } from './bugs/pipes/elapsed.pipe';
 import { BugStatsComponent } from './bugs/components/bug-stats/bug-stats.component';
+import { BugEditComponent } from './bugs/components/bug-edit/bug-edit.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { BugStatsComponent } from './bugs/components/bug-stats/bug-stats.compone
     BugsComponent,
     ClosedCountPipe,
     ElapsedPipe,
-    BugStatsComponent
+    BugStatsComponent,
+    BugEditComponent
   ],
   imports: [
     BrowserModule

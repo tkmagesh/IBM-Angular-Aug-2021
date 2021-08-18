@@ -19,9 +19,8 @@ export class BugsComponent implements OnInit {
     this.bugs = this.bugOperations.getAll()
   }
 
-  onBtnAddNewClick(newBugName : string){
-    const newBug = this.bugOperations.createNew(newBugName);
-    this.bugs.push(newBug);
+  onNewBugCreated(newBug : Bug){
+    this.bugs.push(newBug)
   }
 
   onBugNameClick(bug : Bug){
