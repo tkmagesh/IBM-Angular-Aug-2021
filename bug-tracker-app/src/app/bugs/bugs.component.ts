@@ -39,8 +39,5 @@ export class BugsComponent implements OnInit {
       .forEach((bug) => this.onBtnRemoveClick(bug))
   }
 
-  getClosedCount() : number {
-    return this.bugs.reduce((result, bug) => bug.isClosed ? result + 1 : result, 0)
-  }
-
+  
 }

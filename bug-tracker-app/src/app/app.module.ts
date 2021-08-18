@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { BugsComponent } from './bugs/bugs.component';
 import { ClosedCountPipe } from './bugs/pipes/closed-count.pipe';
 import { ElapsedPipe } from './bugs/pipes/elapsed.pipe';
+import { BugStatsComponent } from './bugs/components/bug-stats/bug-stats.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BugsComponent,
     ClosedCountPipe,
-    ElapsedPipe
+    ElapsedPipe,
+    BugStatsComponent
   ],
   imports: [
     BrowserModule
