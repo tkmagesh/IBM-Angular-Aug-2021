@@ -6,8 +6,25 @@
     (done) 4. Remove any bug
     (done) 5. Remove closed bugs
     (done) 6. Display stats (# of closed bugs / total # of bugs)
-    7. Improvise the bug display
+    (done) 7. Improvise the bug display
     8. Persist the bugs in the localStorage
+        window.localStore
+        =================
+            * key/value store
+            * key must be unique
+            * key/value must be a string
+                Use JSON.stringify() & JSON.parse() for serialization and deserialization
+            * security is taken care by the browser (Same Origin Policy)
+            * ~10 MB limit
+            * APIs
+                * localStorage.setItem(key, value)
+                * localStorage.getItem(key) //=> value
+                * localStorage.removeItem(key)
+                * localStorage.clear()
+                * localStorage.length //=> number of items
+                * localStorage.key(index) //=> key at index
+
+
     9. Display 'createdAt' (using moment.js)
     10. Sort the bugs
     11. Persist the bugs in the server
