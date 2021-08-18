@@ -16,6 +16,7 @@ export class BugsComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.bugs = this.bugOperations.getAll()
   }
 
   onBtnAddNewClick(newBugName : string){
@@ -28,11 +29,14 @@ export class BugsComponent implements OnInit {
   }
 
   onBtnRemoveClick(bugToRemove : Bug){
+    this.bugOperations.remove(bugToRemove)
     this.bugs = this.bugs.filter(bug => bug.id !== bugToRemove.id);
   }
 
   onBtnRemoveClosedClick(){
-    this.bugs = this.bugs.filter(bug => !bug.isClosed);
+    this.bugs
+      .filter(bug => bug.isClosed)
+      .forEach((bug) => this.onBtnRemoveClick(bug))
   }
 
   getClosedCount() : number {

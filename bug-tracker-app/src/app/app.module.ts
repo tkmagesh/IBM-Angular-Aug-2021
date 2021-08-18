@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BugsComponent } from './bugs/bugs.component';
-import { BugOperationsService } from './bugs/services/bugOperations.service';
 import { ClosedCountPipe } from './bugs/pipes/closed-count.pipe';
 
 @NgModule({
@@ -16,7 +15,7 @@ import { ClosedCountPipe } from './bugs/pipes/closed-count.pipe';
     BrowserModule
   ],
   providers: [
-    BugOperationsService
+    
   ],
   bootstrap: [AppComponent]
 })
