@@ -11,6 +11,9 @@ export class BugsComponent implements OnInit {
 
   bugs : Bug[] = [];
 
+  sortAttr : string = '';
+  sortByDesc : boolean = false;
+  
   constructor(private bugOperations : BugOperationsService) {
 
    }
