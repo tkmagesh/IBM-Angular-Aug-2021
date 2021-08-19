@@ -9,6 +9,8 @@ import { BugOperationsService } from '../../services/bugOperations.service';
 })
 export class BugEditComponent implements OnInit {
 
+  newBugName : string = '';
+
   @Output()
   created : EventEmitter<Bug> = new EventEmitter<Bug>();
 
@@ -19,8 +21,8 @@ export class BugEditComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onBtnAddNewClick(newBugName : string){
-    const newBug = this.bugOperations.createNew(newBugName);
+  onBtnAddNewClick(){
+    const newBug = this.bugOperations.createNew(this.newBugName);
     this.created.emit(newBug);
   }
 

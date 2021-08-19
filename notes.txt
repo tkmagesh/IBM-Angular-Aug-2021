@@ -155,3 +155,13 @@ to install moment
     to use moment
     import * as moment from 'moment'
     moment('2021-08-18T09:20:26.721Z').fromNow()
+
+
+Pure Function
+    - A function that does not have side effects
+    - A function whose invocation can be replaced with the result of the function without affecting the final outcome
+
+    Memoization
+        - A technique to cache the result of a function
+
+    

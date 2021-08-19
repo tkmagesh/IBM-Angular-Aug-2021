@@ -23,8 +23,9 @@ export class BugsComponent implements OnInit {
     this.bugs.push(newBug)
   }
 
-  onBugNameClick(bug : Bug){
-    this.bugOperations.toggle(bug)
+  onBugNameClick(bugToToggle : Bug){
+    const toggledBug = this.bugOperations.toggle(bugToToggle)
+    this.bugs = this.bugs.map(bug => bug.id === bugToToggle.id ? toggledBug : bug)
   }
 
   onBtnRemoveClick(bugToRemove : Bug){
