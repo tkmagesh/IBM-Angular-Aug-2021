@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { UtilsModule } from './utils/utils.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BugsComponent } from './bugs/bugs.component';
@@ -18,7 +19,8 @@ import { ClosedCountPipe } from './bugs/pipes/closed-count.pipe';
   ],
   imports: [
     BrowserModule,
-    UtilsModule
+    UtilsModule,
+    HttpClientModule,
   ],
   providers: [
     

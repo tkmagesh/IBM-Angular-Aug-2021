@@ -166,6 +166,23 @@ Pure Function
 
     
 Async Operations
-    - Callback
-    - Promises
-    - Async Await
+    - Callback (singular)
+    - Promises (singular)
+    - Async Await (singular)
+    - Observables (rxjs)
+        operators
+            - map
+            - filter
+            - reduce
+            - scan
+            - switchMap
+            - mergeMap
+
+
+
+Source of Events in the browser
+    - UI Events (Mouse, Keyboard) (plural)
+    - Timer events (plural)
+    - Websockets (plural)
+    - Server Sent Events (plural)
+    - AJAX (singlular)
