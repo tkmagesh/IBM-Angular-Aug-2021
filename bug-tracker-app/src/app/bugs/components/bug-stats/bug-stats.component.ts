@@ -1,11 +1,12 @@
-import { Input } from '@angular/core';
+import { ChangeDetectionStrategy, Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Bug } from '../../models/bug';
 
 @Component({
   selector: 'app-bug-stats',
   templateUrl: './bug-stats.component.html',
-  styleUrls: ['./bug-stats.component.css']
+  styleUrls: ['./bug-stats.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BugStatsComponent implements OnInit {
 
@@ -23,4 +24,7 @@ export class BugStatsComponent implements OnInit {
   }
   */
 
+  getCurrentTime() : Date {
+    return new Date();
+  }
 }
