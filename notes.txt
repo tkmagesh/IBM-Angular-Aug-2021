@@ -186,3 +186,9 @@ Source of Events in the browser
     - Websockets (plural)
     - Server Sent Events (plural)
     - AJAX (singlular)
+
+
+Create a projects module with the following funcationality
+    - Adding a new project (id, name)
+    - List the projects
+    - Inline editing & save of project name
