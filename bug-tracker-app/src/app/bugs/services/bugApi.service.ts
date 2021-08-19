@@ -26,4 +26,9 @@ export class BugApi{
                 .put<Bug>(`http://localhost:3000/bugs/${bugData.id}`, bugData)
         }
     }
+
+    remove(bugData : Bug) : Observable<any>{
+        return this.http
+            .delete<any>(`http://localhost:3000/bugs/${bugData.id}`)
+    }
 }

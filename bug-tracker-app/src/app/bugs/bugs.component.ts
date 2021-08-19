@@ -31,13 +31,17 @@ export class BugsComponent implements OnInit {
   }
 
   onBugNameClick(bugToToggle : Bug){
-    const toggledBug = this.bugOperations.toggle(bugToToggle)
-    this.bugs = this.bugs.map(bug => bug.id === bugToToggle.id ? toggledBug : bug)
+    this.bugOperations
+      .toggle(bugToToggle)
+      .subscribe(toggledBug => this.bugs = this.bugs.map(bug => bug.id === bugToToggle.id ? toggledBug : bug))
+    
   }
 
   onBtnRemoveClick(bugToRemove : Bug){
-    this.bugOperations.remove(bugToRemove)
-    this.bugs = this.bugs.filter(bug => bug.id !== bugToRemove.id);
+    this.bugOperations
+      .remove(bugToRemove)
+      .subscribe(() => this.bugs = this.bugs.filter(bug => bug.id !== bugToRemove.id))
+    
   }
 
   onBtnRemoveClosedClick(){

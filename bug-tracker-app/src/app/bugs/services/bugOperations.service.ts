@@ -9,7 +9,7 @@ import { BugStorageService } from "./bugStorage.service";
 })
 export class BugOperationsService{
    
-    constructor(private bugStorage : BugStorageService, private bugApi : BugApi){
+    constructor(private bugApi : BugApi){
 
     }
 
@@ -17,24 +17,23 @@ export class BugOperationsService{
         return this.bugApi.getAll();
     }
 
-    createNew(newBugName:string) : Bug {
+    createNew(newBugName:string) : Observable<Bug> {
         const newBug = {
             id : 0,
             name : newBugName,
             isClosed : false,
             createdAt : new Date()
         };
-        return this.bugStorage.save(newBug)
+        return this.bugApi.save(newBug)
     }
 
-    toggle(bugToToggle : Bug) : Bug {
+    toggle(bugToToggle : Bug) : Observable<Bug> {
         const toggledBug = { ...bugToToggle, isClosed : !bugToToggle.isClosed };
-        this.bugStorage.save(toggledBug);
-        return toggledBug;
+        return this.bugApi.save(toggledBug);
     }
 
-    remove(bugToRemove : Bug) : void {
-        this.bugStorage.remove(bugToRemove);
+    remove(bugToRemove : Bug) : Observable<any> {
+        return  this.bugApi.remove(bugToRemove);
     }
 }
     
