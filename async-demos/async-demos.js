@@ -33,4 +33,28 @@
     }
 
     window['addAsyncClient'] = addAsyncClient;
+
+    //Async using promise
+    function addAsyncPromise(x,y) {
+        console.log(`   [@service] processing ${x} and ${y}`);
+        const p = new Promise(function(resolve, reject){
+            setTimeout(function(){
+                var result = x+y;
+                console.log(`   [@service] returning the result`);
+                resolve(result);
+            }, 5000)
+        })
+        return p;
+    }
+
+    function addAsyncPromiseClient(x,y){
+        console.log(`[@client] triggering the service`);
+        var p = addAsyncPromise(100,200);
+        //.then(fn) .catch(fn)
+        p.then(function(result){
+            console.log(`[@client] result = ${result}`);
+        });
+    }
+
+    window['addAsyncPromiseClient'] = addAsyncPromiseClient;
 })();
