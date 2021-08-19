@@ -165,3 +165,7 @@ Pure Function
         - A technique to cache the result of a function
 
     
+Async Operations
+    - Callback
+    - Promises
+    - Async Await
