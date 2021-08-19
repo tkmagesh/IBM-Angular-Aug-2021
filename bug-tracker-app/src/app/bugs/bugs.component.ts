@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Bug } from './models/bug';
 import { BugOperationsService } from './services/bugOperations.service';
@@ -15,11 +16,14 @@ export class BugsComponent implements OnInit {
   sortByDesc : boolean = false;
   
   constructor(private bugOperations : BugOperationsService) {
-
-   }
+      
+  }
 
   ngOnInit(): void {
-    this.bugs = this.bugOperations.getAll()
+    /* this.bugs = this.bugOperations.getAll() */
+    this.bugOperations
+      .getAll()
+      .subscribe(bugs => this.bugs = bugs);
   }
 
   onNewBugCreated(newBug : Bug){

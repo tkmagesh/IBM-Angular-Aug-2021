@@ -13,9 +13,4 @@ export class AppComponent {
 
   }
 
-  onDummyClick(){
-    this.http
-      .get('http://localhost:3000/bugs')
-      .subscribe(bugs => console.table(bugs))
-  }
 }
