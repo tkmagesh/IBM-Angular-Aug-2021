@@ -20,7 +20,7 @@ export class BugsComponent implements OnInit {
   }
 
   onNewBugCreated(newBug : Bug){
-    this.bugs.push(newBug)
+    this.bugs = [...this.bugs, newBug];
   }
 
   onBugNameClick(bugToToggle : Bug){

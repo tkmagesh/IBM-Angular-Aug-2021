@@ -7,7 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bug-tracker-app';
-  onDummyClick(){
-    console.log('Dummy button clicked');
-  }
+
 }
