@@ -1,12 +1,12 @@
 import { Injectable } from "@angular/core";
-import { ITimeService, TimeService } from "./time.service";
+import {TimeService } from "./time.service";
 
 @Injectable({
     providedIn : 'root'
 })
 export class GreeterService{
 
-    constructor(private timeService : ITimeService){
+    constructor(private timeService : TimeService){
     }
 
     greet(userName : string) : string {
