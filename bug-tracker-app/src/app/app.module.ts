@@ -11,12 +11,15 @@ import { BugEditComponent } from './bugs/components/bug-edit/bug-edit.component'
 import { ClosedCountPipe } from './bugs/pipes/closed-count.pipe';
 import { NotFoundComponent } from './not-found.component';
 import { BugDetailsComponent } from './bugs/components/bug-details/bug-details.component';
+import { LoggedInGuard } from './auth/loggedInGuard';
+import { LoginComponent } from './auth/login.component';
 
 let routes : Routes = [
   {path: '', redirectTo: '/bugs', pathMatch: 'full' },
   {path : 'add', component : BugEditComponent},
-  {path : 'bugs', component : BugsComponent},
+  {path : 'bugs', component : BugsComponent, canActivate: [LoggedInGuard] },
   {path : 'details/:id', component : BugDetailsComponent},
+  {path : 'login', component : LoginComponent},
   {path : '**', component : NotFoundComponent}
 ];
 
