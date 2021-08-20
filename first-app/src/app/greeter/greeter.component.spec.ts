@@ -50,6 +50,11 @@ fdescribe('GreeterComponent', () => {
     //setting the mock for the greet service
     fakeGreeterService.greet.and.returnValue(expectedResult);
 
+    //setting value in the textbox
+    const txtUserName = debugElement.query(By.css('input[type="text"]')).nativeElement
+    txtUserName.value = 'Magesh';
+    txtUserName.dispatchEvent(new Event('input'));
+    
     //locating the button and triggering the click event
     const btnGreet = debugElement.query(By.css('input[type="button"][value="Greet"]')).nativeElement;
     btnGreet.dispatchEvent(new Event("click"))
@@ -63,6 +68,7 @@ fdescribe('GreeterComponent', () => {
 
     //perform the assertion
     expect(fakeGreeterService.greet).toHaveBeenCalled();
+    expect(fakeGreeterService.greet).toHaveBeenCalledWith('Magesh');
     expect(actualMessage).toBe(expectedResult);
   });
 });

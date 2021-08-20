@@ -9,13 +9,14 @@ import { GreeterService } from './greeter.service';
 export class GreeterComponent implements OnInit {
 
   greetMessage : string = '[Default greet message]';
+  userName : string = ''
 
   constructor( private greeterService : GreeterService) { }
 
   ngOnInit(): void {
   }
 
-  onBtnGreetClick(userName : string){
-    this.greetMessage = this.greeterService.greet(userName);
+  onBtnGreetClick(){
+    this.greetMessage = this.greeterService.greet(this.userName);
   }
 }
