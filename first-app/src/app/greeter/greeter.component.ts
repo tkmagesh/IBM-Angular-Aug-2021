@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GreeterService } from './greeter.service';
 
 @Component({
   selector: 'app-greeter',
@@ -9,13 +10,12 @@ export class GreeterComponent implements OnInit {
 
   greetMessage : string = '[Default greet message]';
 
-  constructor() { }
+  constructor( private greeterService : GreeterService) { }
 
   ngOnInit(): void {
   }
 
   onBtnGreetClick(userName : string){
-    this.greetMessage = `Hi ${userName}, Have a nice day!`;
+    this.greetMessage = this.greeterService.greet(userName);
   }
-
 }

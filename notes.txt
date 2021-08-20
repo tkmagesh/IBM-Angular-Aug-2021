@@ -211,4 +211,26 @@ Outlook/Inbox/Projects/Bug-Tracker/bug-reports
 Outlook/Inbox/Projects/Bug-Tracker/bug-reports/BR-1
 
 
+Testing
+    Jasmine
+        describe, it, xdescribe, xit, fdescribe, fit
+        jasmine spy
+        expect
+
+    Mocha
+        describe, it, xdescribe, xit, fdescribe, fit
+        sinon.js
+        chai.js
+            assert
+                assert.isEqual(result, expectedResult)
+            should
+                result.should.be.equal(expectedResult)
+            expect
+                expect(result).toBe(expectedResult)
+        test runners are configurable
+
+APIs for organizing tests
+APIs for isolating dependencies
+APIs for assertion
+
 
