@@ -2,11 +2,11 @@ import { TestBed } from "@angular/core/testing";
 import { GreeterService } from "./greeter.service";
 import { TimeService } from "./time.service";
 
-fdescribe('Greeter Service', () => {
+describe('Greeter Service', () => {
     let fakeTimeService : jasmine.SpyObj<TimeService> ;
 
     beforeEach(()=>{
-        console.log('beforeEach');
+        
         fakeTimeService = jasmine.createSpyObj('TimeService', ['getCurrent']);
         TestBed.configureTestingModule({
             providers: [
@@ -38,7 +38,6 @@ fdescribe('Greeter Service', () => {
         const expectedResult = 'Hi Magesh, Have a good day!'
 
         //Act
-        
         const actualResult = greeterService.greet(userName);
 
         //Assert
