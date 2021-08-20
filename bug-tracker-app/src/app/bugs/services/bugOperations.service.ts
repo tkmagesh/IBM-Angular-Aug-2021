@@ -17,6 +17,10 @@ export class BugOperationsService{
         return this.bugApi.getAll();
     }
 
+    getById(id : string) : Observable<Bug>{
+        return this.bugApi.getById(id);
+    }
+
     createNew(newBugName:string) : Observable<Bug> {
         const newBug = {
             id : 0,

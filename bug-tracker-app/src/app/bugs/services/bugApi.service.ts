@@ -17,6 +17,11 @@ export class BugApi{
             .get<Bug[]>('http://localhost:3000/bugs')
     }
 
+    getById(id : string) : Observable<Bug> {
+        return this.http
+            .get<Bug>(`http://localhost:3000/bugs/${id}`)
+    }
+
     save(bugData : Bug) : Observable<Bug> {
         if (bugData.id === 0){
             return this.http

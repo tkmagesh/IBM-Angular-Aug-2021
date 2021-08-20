@@ -1,3 +1,6 @@
+<div>
+    <a [routerLink]="['/add']">Create New</a>
+</div>
 <app-bug-stats [data]="bugs" ></app-bug-stats>
 
 <section class="sort">
@@ -12,7 +15,7 @@
     <input type="checkbox" (change)="sortByDesc = $any($event.target).checked">
 </section>
 
-<app-bug-edit (created)="onNewBugCreated($event)" >  </app-bug-edit>
+<!-- <app-bug-edit (created)="onNewBugCreated($event)" >  </app-bug-edit> -->
 
 <section class="list">
     <ol>
@@ -22,8 +25,12 @@
             </span>
             <div class="datetime">{{bug.createdAt | elapsed }}</div>
             <input type="button" value="Remove" (click)="onBtnRemoveClick(bug)">
+            <div>
+                <a [routerLink]="['/details', bug.id]">More...</a>
+            </div>
         </li>
         
     </ol>
     <input type="button" value="Remove Closed" (click)="onBtnRemoveClosedClick()">
+    
 </section>

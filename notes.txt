@@ -192,3 +192,23 @@ Create a projects module with the following funcationality
     - Adding a new project (id, name)
     - List the projects
     - Inline editing & save of project name
+
+http://www.amazon.in
+http://www.amazon.in/electronics
+http://www.amazon.in/electronics/mobile-phones
+http://www.amazon.in/electronics/mobile-phones/Google
+http://www.amazon.in/electronics/mobile-phones/Google/Pixel-XL
+
+http://www.amazon.in/electronics/mobile-phones/Google/Pixel-XL/reviews
+
+
+Outlook
+Outlook/Inbox
+Outlook/Inbox/Projects
+Outlook/Inbox/Projects/Bug-Tracker
+Outlook/Inbox/Projects/Bug-Tracker/bug-reports
+
+Outlook/Inbox/Projects/Bug-Tracker/bug-reports/BR-1
+
+
+
